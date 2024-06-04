@@ -1,0 +1,648 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw; /* Esto es para el 100% de la pantalla */
+    font-weight: 400;
+    font-style: normal;
+    background-image: url(img/fondo.jpg);
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.link{ /* Esta clase se la vamos aplicar a los link*/
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.links{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color:  #008B8B;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.links:hover{
+    background-color: #008B8B;
+    box-shadow: 0 4px 10px rgb(1, 43, 43);
+    transform: scale(1.03);
+}
+
+.imagen{
+    width: 75%; 
+    height: auto; 
+    display: block; 
+    margin: auto; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.contenedor {
+    padding: 16px 32px; /* Espaciado interno */
+    width: 100%; /* Ocupa el 100% del ancho del contenedor padre */
+    box-sizing: border-box; /* Incluir padding y border en el cálculo del ancho total */
+}
+.cabecera{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background: #A1E2B9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cabecera--titulo{
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.cabecera-menu{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+/*Estilos descripcion*/
+
+.descripcion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.descripcion--contenedor{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    width: 60vw;
+}
+
+.descripcion--titulo{
+    font-size: 52px;
+    font-weight: 700;
+    font-family: "Sevillana", cursive;
+}
+
+.descripcion--descripcion{
+    font-size: 16px;
+}
+
+.descripcion--links{
+    display: flex;
+    gap: 20px;
+}
+
+/*Estilos sobre mi*/
+.sobremi{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    width: 75vw;
+    margin-top: 80px;
+}
+.sobremi--titulo{
+    font-size: 45px;
+    font-weight: 700;
+    margin: 1vw;
+    text-align: center;
+    font-family: "Sevillana", cursive;
+    margin-right: -20%; 
+}
+.sobremi--descripcion{
+    width: 65vw;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-right: -4%; 
+}
+/*Estilos para skills*/
+
+.skills{
+    margin-top: 50px;
+    background: #B1E7B9;
+    border-radius: 20px;
+    border: 3px solid  teal;
+}
+
+.skills-titulo{
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    font-family: "Sevillana", cursive;
+}
+
+.skills .container{
+    color: rgb(23, 27, 26);
+    border-radius: 1%;
+    padding: 2%;
+    width: 60vw; 
+    margin: auto;
+    margin-top: 2%;
+    overflow-x: auto; /* Agregar desplazamiento horizontal si el contenido es demasiado ancho */
+    white-space: nowrap; /* Evitar que los elementos se envuelvan */
+}
+
+/* Estilos personalizados para la barra de desplazamiento */
+.skills .container::-webkit-scrollbar {
+    height: 8px; 
+}
+
+.skills .container::-webkit-scrollbar-thumb {
+    background: teal; 
+    border-radius: 10px; 
+}
+
+.skills .container::-webkit-scrollbar-track {
+    background: lightgray; 
+}
+
+.skills .container .row{
+    display: flex; 
+    gap: 1%; 
+}
+
+.skills .container .bar{
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 1rem;
+    background: #0bb89281;
+    transition: 0.3s ease;
+    cursor: pointer;
+    flex: 0 0 auto; 
+    width: calc(100% / 6 - 1.66%); 
+}
+
+.skills .container .bar:hover{
+    box-shadow: 0 4px 10px rgb(1, 43, 43);
+    transform: scale(1.03);
+}
+
+.skills .container .bar .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1;
+    margin-top: 1rem;
+}
+
+.skills .container .bar .info span{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.small-image {
+    width: 50%; 
+    height: auto; 
+    display: block; 
+    margin: auto; 
+}
+
+
+/*Estilos Hobbies*/
+.Hobbies{
+    background: #A1E2B9;
+    margin-top: 50px; /* Ajusta este valor según sea necesario */
+    border-radius: 20px;
+    border: 3px solid  teal;
+}
+
+.hobbies-tiulo{
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    font-family: "Sevillana", cursive;
+}
+
+.Hobbies .contene{
+    color: rgb(25, 26, 25);
+    border-radius: 1%;
+    padding: 2%;
+    width: 60vw; 
+    margin: auto;
+    margin-top: 2%;
+    overflow-x: auto; /* Agregar desplazamiento horizontal si el contenido es demasiado ancho */
+    white-space: nowrap; /* Evitar que los elementos se envuelvan */
+}
+
+
+/* Estilos personalizados para la barra de desplazamiento */
+.Hobbies .contene::-webkit-scrollbar {
+    height: 8px; 
+}
+
+.Hobbies .contene::-webkit-scrollbar-thumb {
+    background: teal; 
+    border-radius: 10px; 
+}
+
+.Hobbies .contene::-webkit-scrollbar-track {
+    background: lightgray; 
+}
+
+
+.Hobbies .contene .colum{
+    display: flex; 
+    gap: 1%; 
+}
+
+.Hobbies .contene .var{
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 1rem;
+    background: #0bb89281;
+    transition: 0.3s ease;
+    cursor: pointer;
+    flex: 0 0 auto; 
+    width: calc(100% / 6 - 1.66%); 
+}
+
+.Hobbies .contene .var:hover{
+    box-shadow: 0 4px 10px rgb(6, 56, 56);
+    transform: scale(1.03);
+}
+
+.Hobbies .contene .var .infor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1;
+    margin-top: 1rem;
+}
+
+.Hobbies .contene .var .infor span{
+    font-size: 1rem;
+    font-weight: 200;
+    margin-top: 0.5rem;
+}
+
+.contenedor2 {
+    padding: 32px 52px; 
+    margin-top: 20px; 
+    border-radius: 10px; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.contenedor3{
+    padding: 32px 52px; 
+    margin-top: 20px; 
+    border-radius: 10px; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+/*Estilos de formacion academica*/
+.formacion-academica {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.formacion-titulo {
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    font-family: "Sevillana", cursive;
+}
+
+.formacion-contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.formacion-item {
+    margin-top: 2%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    transition: 0.3s ease;
+    cursor: pointer;
+    border: 3px solid  teal;
+}
+
+.formacion-item:hover{
+    box-shadow: 0 4px 10px rgb(6, 56, 56);
+    transform: scale(1.03);
+}
+
+.formacion-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.formacion-nombre {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.formacion-fecha {
+    font-size: 14px;
+    color: #555;
+}
+
+/*Estilos de experiensia profesional*/
+.experiencia-profesional {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.experiencia-titulo {
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    font-family: "Sevillana", cursive;
+}
+
+.experiencia-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.experiencia-item {
+    margin-top: 2%;
+    border-radius: 8px;
+    padding: 60px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    width: 40vw;
+    text-align: center;
+}
+
+.experiencia-items {
+    margin-top: 2%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30vw;
+    text-align: center;
+}
+
+.imagen-experiencia {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-repositorio,
+.btn-demo {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4B0082;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-repositorio:hover,
+.btn-demo:hover {
+    background-color: #4B0082;
+    box-shadow: 0 4px 10px rgb(1, 43, 43);
+    transform: scale(1.03);
+}
+
+/*Estilos de contacto*/
+.contacto{
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contacto-titulo{
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    font-family: "Sevillana", cursive;
+}
+
+form {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; 
+    margin-left: 30%;
+}
+
+.field {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4B0082;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#button:hover {
+    background-color: #4B0082;
+}
+
+
+
+/*Estilos del footer*/
+footer {
+    display: flex;
+    justify-content: center;  /* Centrar horizontalmente */
+    align-items: center;  /* Centrar verticalmente */
+    text-align: center;
+    background: #A1E2B9;
+    height: 3vw;  /* Puedes ajustar esta altura según tus necesidades */
+}
+
+/* Dispositivos pequeños (teléfonos en retrato) */
+@media (max-width: 600px) {
+    .cabecera {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cabecera-menu {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .descripcion {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .descripcion--contenedor {
+        width: 70vw;
+    }
+
+    .sobremi {
+        width: 90vw;
+    }
+
+    .sobremi--descripcion {
+        width: 80vw;
+    }
+
+    .skills .container {
+        width: 90vw;
+    }
+
+    .Hobbies .contene {
+        width: 90vw;
+    }
+
+    .formacion-contenedor {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .experiencia-contenedor {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    form {
+        width: 90%;
+        margin-left: 30%;
+    }
+}
+
+/* Dispositivos medianos (tabletas y pantallas pequeñas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .descripcion--contenedor {
+        width: 80vw;
+    }
+
+    .sobremi {
+        width: 80vw;
+    }
+
+    .sobremi--descripcion {
+        width: 70vw;
+    }
+
+    .skills .container {
+        width: 80vw;
+    }
+
+    .Hobbies .contene {
+        width: 80vw;
+    }
+
+    .formacion-contenedor {
+        flex-wrap: wrap;
+    }
+
+    .experiencia-contenedor {
+        flex-wrap: wrap;
+    }
+
+    form {
+        width: 80%;
+        margin-left: 30%;
+    }
+}
+
+/* Dispositivos grandes (laptops y pantallas grandes) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .descripcion--contenedor {
+        width: 70vw;
+    }
+
+    .sobremi {
+        width: 70vw;
+    }
+
+    .sobremi--descripcion {
+        width: 60vw;
+    }
+
+    .skills .container {
+        width: 70vw;
+    }
+
+    .Hobbies .contene {
+        width: 70vw;
+    }
+
+    form {
+        width: 70%;
+        margin-left: 30%;
+    }
+}
+
+/* Dispositivos extra grandes (pantallas muy grandes) */
+@media (min-width: 1441px) {
+    .descripcion--contenedor {
+        width: 60vw;
+    }
+
+    .sobremi {
+        width: 60vw;
+    }
+
+    .sobremi--descripcion {
+        width: 50vw;
+    }
+
+    .skills .container {
+        width: 60vw;
+    }
+
+    .Hobbies .contene {
+        width: 60vw;
+    }
+
+    form {
+        width: 60%;
+        margin-left: 20%;
+    }
+}
